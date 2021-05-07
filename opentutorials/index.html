@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+  </head>
+  <body>
+    <script>
+      /*
+      최초로 1회만 실행되는 함수
+      */
+      function setup() {
+        createCanvas(400, 400);
+        background(220);
+
+        fill("red");
+        point(10, 10);
+
+        fill(255, 0, 255);
+        rect(20, 10, 50, 50);
+
+        fill(255, 0, 255, 100);
+        rect(50, 30, 50, 50, 10);
+
+        stroke(0, 255, 0);
+        strokeWeight(4);
+        fill(255, 0, 255, 255);
+        rect(140, 10, 50, 50, 10, 20, 30, 5);
+
+        stroke(0, 0, 0);
+        strokeWeight(1);
+        fill(255, 255, 255);
+      }
+
+      /*
+      매 번 그려지는 함수
+       */
+      function draw() {
+        circle(random(400), random(400), random(100));
+      }
+    </script>
+  </body>
+</html>

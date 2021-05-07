@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse.html</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+  </head>
+  <body>
+    <script>
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(220);
+      }
+
+      function draw() {
+        px = pow(mouseX - pmouseX, 2);
+        py = pow(mouseY - pmouseY, 2);
+        speed = sqrt(px + py);
+        circle(mouseX, mouseY, speed);
+        // line(pmouseX, pmouseY, mouseX, mouseY);
+      }
+
+      function mousePressed() {
+        background(random(225), random(255), random(255));
+      }
+    </script>
+  </body>
+</html>
